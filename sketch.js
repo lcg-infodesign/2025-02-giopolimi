@@ -21,9 +21,6 @@ function setup() {
   
   createCanvas(windowWidth, totalHeight);
   background(238, 222, 197);
-
-  // Imposta font serif per tutti i testi
-  textFont('Georgia');
   
   // per verificare che il CSV sia caricato correttamente
   if (table.getRowCount() === 0) { // verifica che il numero di righe sia esattamente zero, senza conversioni di tipo
