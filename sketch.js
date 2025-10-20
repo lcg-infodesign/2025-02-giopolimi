@@ -21,6 +21,9 @@ function setup() {
   
   createCanvas(windowWidth, totalHeight);
   background(238, 222, 197);
+
+  // Imposta font serif per tutti i testi
+  textFont('Georgia');
   
   // per verificare che il CSV sia caricato correttamente
   if (table.getRowCount() === 0) { // verifica che il numero di righe sia esattamente zero, senza conversioni di tipo
@@ -80,7 +83,7 @@ function drawHeader(headerHeight) {
   textAlign(LEFT, TOP);
   textSize(32);
   textStyle(BOLD);
-  text("Assignment 2: Glyph System", 100, 100);
+  text("Assignment 2: Glyphs System", 100, 100);
   
   // descrizione del compito
   textSize(21);
@@ -171,7 +174,7 @@ function drawLegend(startY, legendHeight) {
   text("• Colonna 4 (Colore):", boxX + 20, yOffset);
   textStyle(ITALIC);
   fill(100, 80, 60);
-  text("Gradiente da:  MAX        a MIN", boxX + 40, yOffset + 18);
+  text("Gradiente da: MAX         a MIN", boxX + 40, yOffset + 18);
   
   // Disegna i rettangolini colorati per mostrare il gradiente
   let colorBoxSize = 16;
@@ -188,7 +191,7 @@ function drawLegend(startY, legendHeight) {
   fill(color2);
   stroke(80, 60, 40);
   strokeWeight(1);
-  rect(boxX + 202 + colorBoxSize + 8, yOffset + 15, colorBoxSize, colorBoxSize);
+  rect(boxX + 203 + colorBoxSize + 8, yOffset + 15, colorBoxSize, colorBoxSize);
   
   pop();
 }
@@ -342,5 +345,5 @@ function drawLobedLeaf(x, y, size, isRounded) {
 }
 
 function draw() {
-  // Vuoto - tutto viene disegnato in setup()
+  // put drawing code here
 }
